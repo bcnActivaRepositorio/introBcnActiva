@@ -1,0 +1,2 @@
+# introBcnActiva
+exercicis del curs
