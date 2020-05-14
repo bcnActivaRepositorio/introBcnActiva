@@ -70,7 +70,7 @@ function beca2(){
 
     let respuesta;
 
-    if((edadSi && tituloSi ) || paroSi ){
+/*     if((edadSi && tituloSi ) || paroSi ){
 
         respuesta = ("Puede acceder a la beca!");
 
@@ -81,7 +81,11 @@ function beca2(){
     }  else{
 
         respuesta = " No puede accerder a la beca!";
-    }
+    } */
+
+    ((edadSi && tituloSi ) || paroSi ) ?  respuesta = ("Puede acceder a la beca!") :
+    ((edadNo  && tituloNo ) || paroNo) ?  respuesta = ("No puede acceder a la beca!") : 
+                                          respuesta = " No puede accerder a la beca!";
 
     document.getElementById("demo").innerHTML = respuesta;
 }
