@@ -34,10 +34,11 @@
 
 beca(); */
 
-function beca2(){
+/* function beca2(){
     let edad1   = prompt("¿Cuantos años tiene?");
     let titulo1 = prompt("¿Tiene título Universitario?");
-    let paro1 = prompt("¿Esta en situacion de desempleo?");
+    let paro1   = prompt("¿Esta en situacion de desempleo?");
+
 
     if((edad1 >= 18 && titulo1.toLowerCase() == "si") || paro1.toLowerCase() == "si"){
 
@@ -49,4 +50,39 @@ function beca2(){
 
 }
 
-beca2();
+beca2(); */
+
+        //recogida valor checkboxes
+function beca2(){
+    let edadSi   = document.getElementById('siMayor'); 
+    let edadNo   = document.getElementById('noMayor'); 
+    let tituloSi = document.getElementById('siTitulo');
+    let tituloNo = document.getElementById('noTitulo');
+    let paroSi   = document.getElementById('siJob');
+    let paroNo   = document.getElementById('siJob');
+
+    edadSi = edadSi.checked == true;
+    edadNo = edadNo.checked == true;
+    tituloSi = tituloSi.checked == true;
+    tituloNo = tituloNo.checked == true;
+    paroSi   = paroSi.checked == true;
+    paroNo   = paroNo.checked == true;
+
+    let respuesta;
+
+    if((edadSi && tituloSi ) || paroSi ){
+
+        respuesta = ("Puede acceder a la beca!");
+
+    } else if ((edadNo  && tituloNo ) || paroNo  ){
+
+        respuesta = ("No puede acceder a la beca!");
+ 
+    }  else{
+
+        respuesta = " No puede accerder a la beca!";
+    }
+
+    document.getElementById("demo").innerHTML = respuesta;
+}
+
