@@ -82,6 +82,7 @@ function meses(){
     if ( mesAny === 1 || mesAny === 3 || mesAny === 5 || mesAny === 7 || mesAny === 8 || mesAny === 10 || mesAny === 12){
 
         respuesta = longOne;
+        
     }else if (mesAny === 4 || mesAny === 6 || mesAny === 9 || mesAny === 10){
 
         respuesta = shortOne;
