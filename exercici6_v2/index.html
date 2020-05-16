@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Becas</title>
+</head>
+
+<body>
+    <p>¿Mayor de edad?</p>
+    <label for="siUno">Si</label>
+    <input type="checkbox" name="siUno" id="check1" value="mayor edad" onclick="onlyOne(this)" />
+    <label for="siUno">No</label>
+    <input type="checkbox" name="siUno" id="check2" value="menor edad" onclick="onlyOne(this)"/><br>
+    <p>¿T&iacute;tulo Universitario?</p>
+    <label for="tituloSi">Si</label>
+    <input type="checkbox" name="tituloSi" id="check3" value="tituloSi" onclick="onlyOne1(this)"/>
+    <label for="tituloSi">No</label>
+    <input type="checkbox" name="tituloSi" id="check4" value="tituloNo" onclick="onlyOne1(this)"/><br>
+    <p>¿Desempleado?</p>
+    <label for="empleoSi">Si</label>
+    <input type="checkbox" name="empleoSi" id="check5" value="empleoSi" onclick="onlyOne2(this)"/>
+    <label for="empleoSi">No</label>
+    <input type="checkbox" name="empleoSi" id="check6" value="empleoNo" onclick="onlyOne2(this)"/><br>
+    <input type='button' onClick='beca2()' Value='Enviar respuestas' />
+    
+
+    <p id="demo"></p>
+
+
+    <script src="functions.js"></script>
+</body>
+
+</html>
