@@ -44,6 +44,7 @@
     
 } */
 
+//https://stackoverflow.com/questions/59610692/currying-function-instead-of-if-condition-in-javascript
 function meses(){
 
     //datos
@@ -57,7 +58,7 @@ function meses(){
 
     //arr meses
     // aportación de Isaac Bejarano
-    let meses = [
+    let mesos = [
 		"gener",
 		"febrer",
 		"març",
@@ -73,13 +74,16 @@ function meses(){
     ];
     
     //marcamos el indice de la arr -1 por inicio arr posicion 0
-    let shorterOne = `El mes de ${mese[mesAny - 1]} puede tener 28 o 29 d&iacute;as`;
-    let longOne    = `El mes de ${mese[mesAny - 1]} tiene 31 d&iacute;as`;
-    let shortOne   = `El mes de ${mese[mesAny - 1]} tiene 30 d&iacute;as`;
+    let shorterOne = `El mes de ${mesos[mesAny - 1]} pot tenir 28 o 29 dies`;
+    let longOne    = `El mes de ${mesos[mesAny - 1]} te 31 dies`;
+    let shortOne   = `El mes de ${mesos[mesAny - 1]} te 30 dies`;
      
-    //condicionales
+    //condicionales 
+     ( mesAny === 1 || mesAny === 3 || mesAny === 5 || mesAny === 7 || mesAny === 8 || mesAny === 10 || mesAny === 12) ? respuesta = longOne :
+     ( mesAny === 4 || mesAny === 6 || mesAny === 9 || mesAny === 11) ? respuesta = shortOne : respuesta = shorterOne;
+  
 
-    if ( mesAny === 1 || mesAny === 3 || mesAny === 5 || mesAny === 7 || mesAny === 8 || mesAny === 10 || mesAny === 12){
+/*     if ( mesAny === 1 || mesAny === 3 || mesAny === 5 || mesAny === 7 || mesAny === 8 || mesAny === 10 || mesAny === 12){
 
         respuesta = longOne;
         
@@ -89,8 +93,11 @@ function meses(){
     }else {
 
         respuesta = shorterOne;
-    }
+    } */
 
     //aportacion de Cristina
+
+    
+    
     document.getElementById('demo').innerHTML = respuesta;
 }
