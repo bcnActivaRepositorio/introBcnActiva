@@ -11,25 +11,21 @@ function numberOps(){
 
     //nomes numeros
 
-/*     let numbers = /^[0 - 9]+$/;
+   let numbers =  0; //(/^[0 - 9]+$/);
 
-    let numNum1 = (numOne.match(numbers)) ? true : resultado = `Eso era texto berraco!!`;
-    let numNum2 = (numTwo.match(numbers)) ? true : resultado = `Eso era texto berraco!!`; */
-/*     (numOne === Number)    ? resultado = `${numOne} no es un número. Escriba sólo números.`:
-    (numTwo === Number)    ? resultado = `${numTwo} no es un número. Escriba sólo números.`: */
 
     switch (singOp) {
-        case "+":
-            resultado = numOne + numTwo;
+        case ("+"):
+            (resultado !== numbers) ? resultado = "Debe introducir caracteres num&eacute;ricos" : resultado = numOne + numTwo;
             break;
-        case "-":
-            resultado = numOne - numTwo;
+        case ("-"):
+            (resultado !== numbers) ? resultado = "Debe introducir caracteres num&eacute;ricos" :resultado = numOne - numTwo;
             break;
-        case "*":
-            resultado = numOne * numTwo;
+        case ("*"):
+            (resultado !== numbers) ? resultado = "Debe introducir caracteres num&eacute;ricos" :resultado = numOne * numTwo;
             break;
-        case "/":
-            resultado = numOne / numTwo;
+        case ("/"):
+            (resultado !== numbers) ? resultado = "Debe introducir caracteres num&eacute;ricos" :resultado = numOne / numTwo;
             break;
     
         default:
