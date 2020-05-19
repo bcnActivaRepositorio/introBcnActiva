@@ -4,21 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--styles-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>Nombres y Apellidos</title>
 </head>
 
 <body>
-    <label for="nom">Nombre</label>
+ <!--    <label for="nom">Nombre</label>
     <input type="text" id="nom" /><br>
     <label for="apelli">Apellido</label>
     <input type="text" id="apelli" /><br>
     <label for="edad">Edad</label>
-    <input type="text" id="edad" /><br>
-    
-    <p id="demo"></p>
-    <div id='datos'></div>
-    <input type='button' onClick='nombres()' Value='Clica aquí' />
-    
+    <input type="text" id="edad" /><br> -->
+
+    <!-- <p id="demo"></p>
+    <div id='datos'></div> -->
+    <!--  <input type='button' onClick='nombres()' Value='Clica aquí' /> -->
+
+    <div class="container -md">
+        <div class="card" style="width: 18rem;">
+            <img src="./img/click.png" class="card-img-top" alt="logo">
+            <div class="card-body">
+                <h5 class="card-title">Nombre y edad</h5>
+                <p class="card-text">Introduzca su nombre y edad</p>
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="nom" placeholder="nombre" aria-label="nombre"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="apelli" placeholder="apellidos" aria-label="apellidos"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="edad" placeholder="edad" aria-label="edad"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+
+
+            <div id="boton">
+                <a class="btn btn-primary" onclick="nombres()">Clica aqu&iacute;</a>
+            </div>
+            <p id="demo"></p>
+            <p id="modo"></p>
+        </div>
+    </div>
+    </div>
+
 
     <script src="functions.js"></script>
 </body>

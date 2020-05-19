@@ -1,21 +1,21 @@
 function horoscopo() {
   //recogida de datos
-  let diaMes = document.getElementById("num1").value;
+  let dias = document.getElementById("num1").value;
 
   //convertir a Number
-  diaMes = parseInt(diaMes);
+  dias = parseInt(dias);
 
   //recogida datos str
-  let mesAny = document.getElementById("meses").value;
+  let mes = document.getElementById("meses").value;
 
   // pulido datos
-  mesAny = mesAny.replace(/\s+/g,''); //quitamos espacios en blanco
+  mes = mes.replace(/\s+/g,''); //quitamos espacios en blanco
 
-  mesAny = mesAny.toLowerCase(); //really Mary?
+  mes = mes.toLowerCase(); //really Mary?
 
 
   //array signos por si deseamo reutilizarlo, no necesario
-  let signHor = [
+  let signs = [
     "Acuario",
     "Piscis",
     "Aries",
@@ -46,32 +46,35 @@ function horoscopo() {
   ];
 
 
-  //declaracion respuesta
-  let respuesta;
+  //declaracion text
+  let text;
 
   /**
    * He tratado de convertir el switch en un obj, pero no lo he conseguido
-   * respuesta de codewars haz un horoscopo. He intentado NO utilizar if
+   * text de codewars haz un horoscopo. He intentado NO utilizar if
    * pero, incluso con ternarios, no veo otra posibilidad con los conocimientos que tengo.
    * Hasta aquí.
+
+   https://dev.to/lukyhenson/replace-your-switch-statement-and-multiple-if-and-else-using-object-literals-en-us-1dec
+   
    */
   const signos = () =>{ 
-      (mesAny === mesos[0])  ? (diaMes < 20) ? respuesta = signHor[11] : respuesta = signHor[0] :
-      (mesAny === mesos[1])  ? (diaMes < 19) ? respuesta = signHor[0] : respuesta = signHor[1]  :
-      (mesAny === mesos[2])  ? (diaMes < 21) ? respuesta = signHor[1] : respuesta = signHor[2]  :
-      (mesAny === mesos[3])  ? (diaMes < 20) ? respuesta = signHor[2] : respuesta = signHor[3]  :
-      (mesAny === mesos[4])  ? (diaMes < 21) ? respuesta = signHor[3] : respuesta = signHor[4]  :
-      (mesAny === mesos[5])  ? (diaMes < 21) ? respuesta = signHor[4] : respuesta = signHor[5]  :
-      (mesAny === mesos[6])  ? (diaMes < 23) ? respuesta = signHor[5] : respuesta = signHor[6]  :
-      (mesAny === mesos[7])  ? (diaMes < 23) ? respuesta = signHor[6] : respuesta = signHor[7]  :
-      (mesAny === mesos[8])  ? (diaMes < 23) ? respuesta = signHor[7] : respuesta = signHor[8]  :
-      (mesAny === mesos[9])  ? (diaMes < 23) ? respuesta = signHor[8] : respuesta = signHor[9]  :
-      (mesAny === mesos[10]) ? (diaMes < 22) ? respuesta = signHor[9] : respuesta = signHor[10] :
-      (mesAny === mesos[11]) ? (diaMes < 22) ? respuesta = signHor[10] : respuesta = signHor[11] :
-                                        respuesta = "¿No sabe escribir el mes de su cumplea&ntilde;os?"; 
-                                        return respuesta;
+      (mes === mesos[0])  ? (dias < 20) ? text = signs[11] : text = signs[0] :
+      (mes === mesos[1])  ? (dias < 19) ? text = signs[0] : text = signs[1]  :
+      (mes === mesos[2])  ? (dias < 21) ? text = signs[1] : text = signs[2]  :
+      (mes === mesos[3])  ? (dias < 20) ? text = signs[2] : text = signs[3]  :
+      (mes === mesos[4])  ? (dias < 21) ? text = signs[3] : text = signs[4]  :
+      (mes === mesos[5])  ? (dias < 21) ? text = signs[4] : text = signs[5]  :
+      (mes === mesos[6])  ? (dias < 23) ? text = signs[5] : text = signs[6]  :
+      (mes === mesos[7])  ? (dias < 23) ? text = signs[6] : text = signs[7]  :
+      (mes === mesos[8])  ? (dias < 23) ? text = signs[7] : text = signs[8]  :
+      (mes === mesos[9])  ? (dias < 23) ? text = signs[8] : text = signs[9]  :
+      (mes === mesos[10]) ? (dias < 22) ? text = signs[9] : text = signs[10] :
+      (mes === mesos[11]) ? (dias < 22) ? text = signs[10] : text = signs[11] :
+                                        text = "¿No sabe escribir el mes de su cumplea&ntilde;os?"; 
+                                        return text;
   } 
   
     //pintado pantalla
-    document.getElementById('demo').innerHTML = ` Tu signo del zodiaco es: ${signos(respuesta)}`;
+    document.getElementById('demo').innerHTML = ` Tu signo del zodiaco es: ${signos(text)}`;
 }

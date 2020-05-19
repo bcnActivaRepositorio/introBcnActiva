@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--styles-->
     <link rel="stylesheet" href="./css/styles.css">
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Nombre</title>
+
+    <title>Becas</title>
 </head>
 
 <body>
-    <form action="">
-        <!-- <label for="name"> Nombre</label>
-        <input type="text" name="name" id="name"> -->
-        <!-- <input type="button" value="Enviar" onclick="nombres()"> -->
-    </form>
+<!--     <label for="num">Numero de palabras</label>
+    <input type="number" id="num" /><br>
+    <input type='button' onClick='numPal()' Value='Clica aquí' />
+    <p class="demo"></p> -->
+
     <div class="container -md">
         <div class="card" style="width: 18rem;">
             <img src="./img/click.png" class="card-img-top" alt="logo">
             <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <p class="card-text">Introduzca su nombre y veamos que pasa</p>
+                <h5 class="card-title">Becas</h5>
+                <p class="card-text">Cantidad alumnos</p>
                 <div class="input-group flex-nowrap">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">@</span>
                     </div>
-                    <input type="text" class="form-control" id="name" placeholder="nombre" aria-label="nombre"
+                    <input type="number" class="form-control" id="num" placeholder="cantidad alumnos" aria-label="num"
                         aria-describedby="addon-wrapping">
                 </div><br>
                 <div>
-                    <a class="btn btn-primary" onclick="nombres()">Clica aqu&iacute;</a>
+                    <a class="btn btn-primary" onclick="numAl()">Clica aqu&iacute;</a>
                 </div>
                 <p id="modo"></p>
+                <p id="modo2"></p>
             </div>
         </div>
     </div>
-
     <script src="functions.js"></script>
 </body>
 
