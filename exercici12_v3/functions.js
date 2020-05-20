@@ -7,8 +7,8 @@ function numAl(){
     let becaNo = [];
     let text   = "";
     let text1  = "";
-    let text2  = "";
     let nombre, edad, titulo, paro;
+    let total = 0;
     //LOOP
     for(let i = 0; i < numal; i++){
          nombre = prompt("Introduzca su nombre");
@@ -25,14 +25,18 @@ function numAl(){
 
     //loop to print
     for (let i = 0; i < becaSi.length; i++){
-        text += "Becado:"  + becaSi[i] + "<br/>";
+        text += "Becado:" + " "+ becaSi[i] + "<br/>";
+        total = total + 1;
     }
-    document.getElementById("modo").innerHTML = text;
+    
 
     for (let i = 0; i < becaNo.length; i++){
-        text1 += "No becado:" + becaNo[i] + "<br/>";
+        text1 += "No becado:" + " " + becaNo[i] + "<br/>";
     }
     document.getElementById("modo2").innerHTML = text1;
+    document.getElementById("modo").innerHTML = text;
+    document.getElementById("modo1").innerHTML = ` Número de becados : ${becaSi.length}`;
+
 }
 
 //Solución CARLOS. La he complicado para trabajar el loop
